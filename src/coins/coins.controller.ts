@@ -8,7 +8,7 @@ import { CoinPricesResponseDto } from './coins.dto';
 export class CoinsControlller {
   constructor(private readonly coinsService: CoinsService) {}
 
-  @Get('/btc-usdt')
+  @Get('/BTC-USDT')
   @ApiOkResponse({ type: CoinPricesResponseDto })
   async getBtc(): Promise<CoinPricesResponseDto> {
     return await this.coinsService.getBtcUsdtPrices();
