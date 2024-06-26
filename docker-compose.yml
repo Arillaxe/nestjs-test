@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  nestjs-test:
+    image: nestjs-test
+    build:
+      context: .
+    ports:
+      - "${PORT}:${PORT}"
+    env_file:
+      - .env
