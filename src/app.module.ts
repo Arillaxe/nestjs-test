@@ -13,6 +13,8 @@ import * as Joi from 'joi';
       validationSchema: Joi.object({
         UPDATE_INTERVAL: Joi.number().min(1000).required(),
         SERVICE_COMMISSION: Joi.number().min(0).required(),
+        FETCH_TIMEOUT: Joi.number(),
+        PORT: Joi.number(),
       }),
     }),
     OracleModule,
